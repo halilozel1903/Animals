@@ -74,12 +74,7 @@
 				9FE143AB21A1E62500EA1EAA /* ViewController.swift */,
 				9FE143AD21A1E62500EA1EAA /* Main.storyboard */,
 				9FE143B021A1E62800EA1EAA /* Assets.xcassets */,
-				9FE143C221A202FA00EA1EAA /* Snake.wav */,
-				9FE143BB21A1E64200EA1EAA /* Cat.wav */,
-				9FE143C721A2030F00EA1EAA /* Elephant.wav */,
-				9FE143C621A2030F00EA1EAA /* Lion.wav */,
-				9FE143BD21A1E64800EA1EAA /* Dog.wav */,
-				9FE143C421A2030700EA1EAA /* Monkey.wav */,
+				9FE143CA21A2108E00EA1EAA /* Sounds */,
 				9FE143B221A1E62800EA1EAA /* LaunchScreen.storyboard */,
 				9FE143B521A1E62800EA1EAA /* Info.plist */,
 			);
@@ -92,6 +87,19 @@
 				9FE143C021A1FDBA00EA1EAA /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FE143CA21A2108E00EA1EAA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143C721A2030F00EA1EAA /* Elephant.wav */,
+				9FE143C221A202FA00EA1EAA /* Snake.wav */,
+				9FE143BB21A1E64200EA1EAA /* Cat.wav */,
+				9FE143C421A2030700EA1EAA /* Monkey.wav */,
+				9FE143BD21A1E64800EA1EAA /* Dog.wav */,
+				9FE143C621A2030F00EA1EAA /* Lion.wav */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

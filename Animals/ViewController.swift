@@ -12,7 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     
-    
+    // buttonların ve label'in tanımları
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var catButton: UIButton!
     @IBOutlet weak var dogButton: UIButton!
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monkeyButton: UIButton!
     @IBOutlet weak var snakeButton: UIButton!
     
-    
+    // Ses dosyalarının tanımları
     var catSound : AVAudioPlayer = AVAudioPlayer()
     var dogSound : AVAudioPlayer = AVAudioPlayer()
     var elephantSound : AVAudioPlayer = AVAudioPlayer()
@@ -29,19 +29,23 @@ class ViewController: UIViewController {
     var monkeySound : AVAudioPlayer = AVAudioPlayer()
     var snakeSound : AVAudioPlayer = AVAudioPlayer()
     
+    // button nesnesi
     var button = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // labelda bulunan yazıyı gizleme
         messageLabel.isHidden = true
         
+        // tanımlanan dosyalara ses dosyalarının adları ve uzantıları eklendi.
         let soundCatFile = Bundle.main.path(forResource: "Cat", ofType: "wav")
         let soundDogFile = Bundle.main.path(forResource: "Dog", ofType: "wav")
         let soundElephantFile = Bundle.main.path(forResource: "Elephant", ofType: "wav")
         let soundLionFile = Bundle.main.path(forResource: "Lion", ofType: "wav")
         let soundMonkeyFile = Bundle.main.path(forResource: "Monkey", ofType: "wav")
         let soundSnakeFile = Bundle.main.path(forResource: "Snake", ofType: "wav")
+        
         
         do{
             try catSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundCatFile!))
