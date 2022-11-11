@@ -1,4 +1,4 @@
 # Animals
-Animals hayvanların resimlerine tıklayıp çıkardıkları sesleri öğrenebileceğiniz bir uygulamadır.<br>
-Uygulamada şimdilik 6 adet hayvan bulunmaktadır. Onların sayısı ilerleyen zamanlarda arttıralacak.<br>
-Çocuklarınızla ya da kardeşlerinizle eğlenceli vakitler geçirmek için kullanılabilir bir uygulamadır.
+Animals is an application where you can click on the pictures of animals and learn the sounds they make.<br>
+Currently, there are 6 animals in the application. Their number will increase in the future.<br>
+It is an application that can be used to have fun with your children or siblings.
