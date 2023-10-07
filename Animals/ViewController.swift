@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     
     // buttonların ve label'in tanımları
     @IBOutlet weak var messageLabel: UILabel!
@@ -85,24 +85,24 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     /*
-    @IBAction func catSound(_ sender: Any) {
-        messageLabel.isHidden = false
-        messageLabel.text = "Miaow!!!"
-        
-        catSound.play()
-        
-        Timer.scheduledTimer(timeInterval: 1.25, target: self, selector: #selector(hideLabel), userInfo: nil, repeats: false)
+     @IBAction func catSound(_ sender: Any) {
+     messageLabel.isHidden = false
+     messageLabel.text = "Miaow!!!"
      
-        
-    }*/
+     catSound.play()
+     
+     Timer.scheduledTimer(timeInterval: 1.25, target: self, selector: #selector(hideLabel), userInfo: nil, repeats: false)
+     
+     
+     }*/
     
     
     
     @IBAction func soundAnimals(_ sender: UIButton) {
         
-    
+        
         switch sender {
         case catButton:
             messageLabel.isHidden = false
@@ -148,8 +148,8 @@ class ViewController: UIViewController {
             snakeSound.play()
             
             Timer.scheduledTimer(timeInterval: 1.50, target: self, selector: #selector(hideLabel), userInfo: nil, repeats: false)
-    
-    
+            
+            
         default:
             break
             
@@ -159,15 +159,15 @@ class ViewController: UIViewController {
     }
     
     /*
-    @IBAction func dogSound(_ sender: Any) {
-        messageLabel.isHidden = false
-        messageLabel.text = "Woof!!!"
-        
-        dogSound.play()
-        
-        Timer.scheduledTimer(timeInterval: 1.25, target: self, selector: #selector(hideLabel), userInfo: nil, repeats: false)
-
-    }*/
+     @IBAction func dogSound(_ sender: Any) {
+     messageLabel.isHidden = false
+     messageLabel.text = "Woof!!!"
+     
+     dogSound.play()
+     
+     Timer.scheduledTimer(timeInterval: 1.25, target: self, selector: #selector(hideLabel), userInfo: nil, repeats: false)
+     
+     }*/
     
     @objc func hideLabel(){
         messageLabel.isHidden = true
