@@ -39,50 +39,12 @@ class ViewController: UIViewController {
         messageLabel.isHidden = true
         
         // tanımlanan dosyalara ses dosyalarının adları ve uzantıları eklendi.
-        let soundCatFile = Bundle.main.path(forResource: "Cat", ofType: "wav")
-        let soundDogFile = Bundle.main.path(forResource: "Dog", ofType: "wav")
-        let soundElephantFile = Bundle.main.path(forResource: "Elephant", ofType: "wav")
-        let soundLionFile = Bundle.main.path(forResource: "Lion", ofType: "wav")
-        let soundMonkeyFile = Bundle.main.path(forResource: "Monkey", ofType: "wav")
-        let soundSnakeFile = Bundle.main.path(forResource: "Snake", ofType: "wav")
-        
-        
-        do{
-            try catSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundCatFile!))
-        }catch{
-            print(error)
-        }
-        
-        do{
-            try dogSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundDogFile!))
-        }catch{
-            print(error)
-        }
-        
-        do{
-            try elephantSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundElephantFile!))
-        }catch{
-            print(error)
-        }
-        
-        do{
-            try lionSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundLionFile!))
-        }catch{
-            print(error)
-        }
-        
-        
-        do{
-            try monkeySound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundMonkeyFile!))
-        }catch{
-            print(error)
-        }
-        
-        do{
-            try snakeSound = AVAudioPlayer(contentsOf: URL(fileURLWithPath: soundSnakeFile!))
-        }catch{
-            print(error)
-        }
+        configureSoundPlayer(forResource: "Cat", fileExtension: "wav", player: &catSound, button: catButton)
+        configureSoundPlayer(forResource: "Dog", fileExtension: "wav", player: &dogSound, button: dogButton)
+        configureSoundPlayer(forResource: "Elephant", fileExtension: "wav", player: &elephantSound, button: elephantButton)
+        configureSoundPlayer(forResource: "Lion", fileExtension: "wav", player: &lionSound, button: lionButton)
+        configureSoundPlayer(forResource: "Monkey", fileExtension: "wav", player: &monkeySound, button: monkeyButton)
+        configureSoundPlayer(forResource: "Snake", fileExtension: "wav", player: &snakeSound, button: snakeButton)
         
     }
     
@@ -172,6 +134,21 @@ class ViewController: UIViewController {
     @objc func hideLabel(){
         messageLabel.isHidden = true
     }
-    
+
+    private func configureSoundPlayer(forResource resource: String, fileExtension: String, player: inout AVAudioPlayer, button: UIButton) {
+        guard let soundURL = Bundle.main.url(forResource: resource, withExtension: fileExtension) else {
+            print("Error: Could not find \(resource).\(fileExtension) in the main bundle.")
+            button.isEnabled = false
+            return
+        }
+
+        do {
+            try player = AVAudioPlayer(contentsOf: soundURL)
+        } catch {
+            print("Error loading \(resource).\(fileExtension): \(error)")
+            button.isEnabled = false
+        }
+    }
+
 }
 
