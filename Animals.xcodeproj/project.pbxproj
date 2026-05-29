@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9FE143AA21A1E62500EA1EAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143A921A1E62500EA1EAA /* AppDelegate.swift */; };
-		9FE143AC21A1E62500EA1EAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143AB21A1E62500EA1EAA /* ViewController.swift */; };
-		9FE143AF21A1E62500EA1EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE143AD21A1E62500EA1EAA /* Main.storyboard */; };
+		9FE1440121A3000000EA1EAA /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143F121A3000000EA1EAA /* Animal.swift */; };
+		9FE1440221A3000000EA1EAA /* AnimalSoundsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143F221A3000000EA1EAA /* AnimalSoundsInteractor.swift */; };
+		9FE1440321A3000000EA1EAA /* AnimalSoundsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143F321A3000000EA1EAA /* AnimalSoundsPresenter.swift */; };
+		9FE1440421A3000000EA1EAA /* AnimalSoundsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143F421A3000000EA1EAA /* AnimalSoundsRouter.swift */; };
+		9FE1440521A3000000EA1EAA /* AnimalSoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE143F521A3000000EA1EAA /* AnimalSoundsView.swift */; };
 		9FE143B121A1E62800EA1EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FE143B021A1E62800EA1EAA /* Assets.xcassets */; };
 		9FE143B421A1E62800EA1EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FE143B221A1E62800EA1EAA /* LaunchScreen.storyboard */; };
 		9FE143BC21A1E64200EA1EAA /* Cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9FE143BB21A1E64200EA1EAA /* Cat.wav */; };
@@ -24,8 +27,6 @@
 /* Begin PBXFileReference section */
 		9FE143A621A1E62500EA1EAA /* Animals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE143A921A1E62500EA1EAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9FE143AB21A1E62500EA1EAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9FE143AE21A1E62500EA1EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FE143B021A1E62800EA1EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FE143B321A1E62800EA1EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FE143B521A1E62800EA1EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +37,12 @@
 		9FE143C421A2030700EA1EAA /* Monkey.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Monkey.wav; sourceTree = "<group>"; };
 		9FE143C621A2030F00EA1EAA /* Lion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Lion.wav; sourceTree = "<group>"; };
 		9FE143C721A2030F00EA1EAA /* Elephant.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Elephant.wav; sourceTree = "<group>"; };
+
+		9FE143F121A3000000EA1EAA /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		9FE143F221A3000000EA1EAA /* AnimalSoundsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSoundsInteractor.swift; sourceTree = "<group>"; };
+		9FE143F321A3000000EA1EAA /* AnimalSoundsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSoundsPresenter.swift; sourceTree = "<group>"; };
+		9FE143F421A3000000EA1EAA /* AnimalSoundsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSoundsRouter.swift; sourceTree = "<group>"; };
+		9FE143F521A3000000EA1EAA /* AnimalSoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalSoundsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,14 +78,66 @@
 			isa = PBXGroup;
 			children = (
 				9FE143A921A1E62500EA1EAA /* AppDelegate.swift */,
-				9FE143AB21A1E62500EA1EAA /* ViewController.swift */,
-				9FE143AD21A1E62500EA1EAA /* Main.storyboard */,
+				9FE143E021A3000000EA1EAA /* AnimalSoundsVIPER */,
 				9FE143B021A1E62800EA1EAA /* Assets.xcassets */,
 				9FE143CA21A2108E00EA1EAA /* Sounds */,
 				9FE143B221A1E62800EA1EAA /* LaunchScreen.storyboard */,
 				9FE143B521A1E62800EA1EAA /* Info.plist */,
 			);
 			path = Animals;
+			sourceTree = "<group>";
+		};
+
+		9FE143E021A3000000EA1EAA /* AnimalSoundsVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143E121A3000000EA1EAA /* Entity */,
+				9FE143E221A3000000EA1EAA /* Interactor */,
+				9FE143E321A3000000EA1EAA /* Presenter */,
+				9FE143E421A3000000EA1EAA /* Router */,
+				9FE143E521A3000000EA1EAA /* View */,
+			);
+			path = AnimalSoundsVIPER;
+			sourceTree = "<group>";
+		};
+		9FE143E121A3000000EA1EAA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143F121A3000000EA1EAA /* Animal.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9FE143E221A3000000EA1EAA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143F221A3000000EA1EAA /* AnimalSoundsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9FE143E321A3000000EA1EAA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143F321A3000000EA1EAA /* AnimalSoundsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9FE143E421A3000000EA1EAA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143F421A3000000EA1EAA /* AnimalSoundsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9FE143E521A3000000EA1EAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9FE143F521A3000000EA1EAA /* AnimalSoundsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9FE143BF21A1FDB900EA1EAA /* Frameworks */ = {
@@ -128,8 +187,8 @@
 		9FE1439E21A1E62500EA1EAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
 				ORGANIZATIONNAME = "Halil Özel";
 				TargetAttributes = {
 					9FE143A521A1E62500EA1EAA = {
@@ -138,7 +197,7 @@
 				};
 			};
 			buildConfigurationList = 9FE143A121A1E62500EA1EAA /* Build configuration list for PBXProject "Animals" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -164,7 +223,6 @@
 				9FE143B421A1E62800EA1EAA /* LaunchScreen.storyboard in Resources */,
 				9FE143B121A1E62800EA1EAA /* Assets.xcassets in Resources */,
 				9FE143BE21A1E64800EA1EAA /* Dog.wav in Resources */,
-				9FE143AF21A1E62500EA1EAA /* Main.storyboard in Resources */,
 				9FE143BC21A1E64200EA1EAA /* Cat.wav in Resources */,
 				9FE143C321A202FA00EA1EAA /* Snake.wav in Resources */,
 				9FE143C821A2030F00EA1EAA /* Lion.wav in Resources */,
@@ -179,22 +237,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FE143AC21A1E62500EA1EAA /* ViewController.swift in Sources */,
 				9FE143AA21A1E62500EA1EAA /* AppDelegate.swift in Sources */,
+				9FE1440121A3000000EA1EAA /* Animal.swift in Sources */,
+				9FE1440221A3000000EA1EAA /* AnimalSoundsInteractor.swift in Sources */,
+				9FE1440321A3000000EA1EAA /* AnimalSoundsPresenter.swift in Sources */,
+				9FE1440421A3000000EA1EAA /* AnimalSoundsRouter.swift in Sources */,
+				9FE1440521A3000000EA1EAA /* AnimalSoundsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9FE143AD21A1E62500EA1EAA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9FE143AE21A1E62500EA1EAA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9FE143B221A1E62800EA1EAA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -257,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -312,7 +366,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -329,13 +383,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q29ZWM92L;
 				INFOPLIST_FILE = Animals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.halil.ozel.Animals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -347,13 +402,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8Q29ZWM92L;
 				INFOPLIST_FILE = Animals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.halil.ozel.Animals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
